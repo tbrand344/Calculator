@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Scanner operator = new Scanner(System.in);
+		Scanner decision = new SCanner(System.in);
+		int firstNum;
+		int secondNum;
+		int result;
+		String operation;
+		String choice;
+		String discontinue = "no";
+		
+		while(true)
+		System.out.print("Type your first number: ");
+		firstNum = input.nextInt();
+		System.out.print("\nType your second number: ");
+		secondNum = input.nextInt();
+		System.out.print("\nWhich operation(+-*/): ");
+		operation = operator.nextLine();
+		switch(operation) {
+		    case "+":
+		        result = firstNum + secondNum;
+		        System.out.println("\nResult: " + result);
+		        break;
+		    case "-":
+		        result = firstNum - secondNum;
+		        System.out.println("\nResult: " + result);
+		        break;
+		    case "*":
+		        result = firstNum * secondNum;
+		        System.out.println("\nResult: " + result);
+		        break;
+		    case "/":
+		        result = firstNum / secondNum;
+		        System.out.println("\nResult: " + result);
+		        break;
+		    default:
+		        System.out.println("Pick an operation");
+		        break;
+		}
+		System.out.println("Do want to do another calculation? ");
+		choice = decision.nextLine();
+		if(choice.equalsIgnoreCase(discontinue))
+		    break;
+		else
+		    continue;
+	}
+	System.out.println("\n\tThank you for using the Calculator. Have a nice day.")
+}
