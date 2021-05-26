@@ -23,30 +23,32 @@ public class Main
 		    switch(operation) {
 		        case "+":
 		            result = firstNum + secondNum;
-		            System.out.println("\nResult: " + result);
+		            System.out.println("\nResult: " + result + "\n");
 		            break;
 		        case "-":
 		            result = firstNum - secondNum;
-		            System.out.println("\nResult: " + result);
+		            System.out.println("\nResult: " + result + "\n");
 		            break;
 		        case "*":
 		            result = firstNum * secondNum;
-		            System.out.println("\nResult: " + result);
+		            System.out.println("\nResult: " + result + "\n");
 		            break;
 		        case "/":
 		            result = firstNum / secondNum;
-		            System.out.println("\nResult: " + result);
+		            System.out.println("\nResult: " + result + "\n");
 		            break;
 		        default:
 		            System.out.println("Pick an operation");
 		            break;
 		    }
-		System.out.println("Do want to do another calculation?(yes/no) ");
+		System.out.print("Do want to do another calculation?(yes/no) ");
 		choice = decision.nextLine();
+		System.out.print("\n\n");
 		if(choice.equalsIgnoreCase(discontinue))
 		    break;
 		else 
 		    continue;
 		}
+		System.out.println("\nThank you for using the Calculator.");
 	}
 }
